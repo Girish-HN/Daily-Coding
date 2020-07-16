@@ -13,7 +13,7 @@ def missing_positive_integer(my_list):
     
     return min(my_list)
 
-#Drawback of the above approach is it takes extra space for assigning outcome which is not the right solution
+#Drawback of the above approach is it takes extra space for assigning "max_value" which is not the right solution
 my_list = [1,2,3,4,5,8,-1,-12,-3,-4,-8]
 
 print(missing_positive_integer(my_list))
