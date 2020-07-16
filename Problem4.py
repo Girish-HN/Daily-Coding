@@ -5,12 +5,13 @@
 #For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3
 
 def missing_positive_integer(my_list):
-    outcome = [num for num in range(1,max(my_list)) if num not in my_list]
+    max_value = max(my_list)
+    my_list = [num for num in range(1,max(my_list)) if num not in my_list]
 
-    if len(outcome) == 0:
-        outcome.append(max(my_list)+1)
+    if len(my_list) == 0:
+        my_list.append(max_value+1)
     
-    return min(outcome)
+    return min(my_list)
 
 #Drawback of the above approach is it takes extra space for assigning outcome which is not the right solution
 my_list = [1,2,3,4,5,8,-1,-12,-3,-4,-8]
