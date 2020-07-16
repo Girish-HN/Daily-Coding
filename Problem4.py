@@ -12,7 +12,7 @@ def missing_positive_integer(my_list):
     
     return min(outcome)
 
-#Drawback of the above approach is it takes extra space for assigning outcome which is not the ryt solution
+#Drawback of the above approach is it takes extra space for assigning outcome which is not the right solution
 my_list = [1,2,3,4,5,8,-1,-12,-3,-4,-8]
 
 print(missing_positive_integer(my_list))
@@ -21,6 +21,8 @@ print(missing_positive_integer(my_list))
 def sortOfSort(arr) :
     for index in range(len(arr)):
         checkValue = arr[index]
+        #This approach uses linear sort for positive integers. For reference use the belwo link for algorithm explanation 
+        #https://stackoverflow.com/questions/51346136/given-an-array-of-integers-find-the-first-missing-positive-integer-in-linear-ti
         
         while(checkValue > 0 and checkValue != index and checkValue < len(arr) and arr[checkValue] != checkValue):
             print(checkValue, index, arr[checkValue])
